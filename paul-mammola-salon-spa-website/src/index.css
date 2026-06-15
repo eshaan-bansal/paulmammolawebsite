@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 38 40% 88%;
+    --foreground: 160 16% 18%;
+    --card: 160 16% 18%;
+    --card-foreground: 38 40% 88%;
+    --popover: 160 16% 18%;
+    --popover-foreground: 38 40% 88%;
+    --primary: 40 62% 45%;
+    --primary-foreground: 160 16% 12%;
+    --secondary: 155 14% 30%;
+    --secondary-foreground: 38 40% 88%;
+    --muted: 155 14% 25%;
+    --muted-foreground: 38 20% 65%;
+    --accent: 40 62% 45%;
+    --accent-foreground: 160 16% 12%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 38 40% 88% / 0.12;
+    --input: 38 40% 88% / 0.3;
+    --ring: 40 62% 45%;
+    --chart-1: 35 82% 76%;
+    --chart-2: 100 15% 42%;
+    --chart-3: 30 60% 50%;
+    --chart-4: 35 70% 60%;
+    --chart-5: 320 10% 30%;
+    --radius: 0rem;
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Jost', sans-serif;
+    --font-display: 'Cormorant Garamond', serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --sidebar-background: 0 0% 3.1%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 35 82% 76%;
+    --sidebar-primary-foreground: 0 0% 3.1%;
+    --sidebar-accent: 320 10% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 100% / 0.12;
+    --sidebar-ring: 35 82% 76%;
+
+    --pm-obsidian: #2d3f38;
+    --pm-maroon: #1a2a24;
+    --pm-gold: #b8922a;
+    --pm-gold-alt: #c9a44a;
+    --pm-ivy: #8fa89a;
+    --pm-rust: #4a6358;
+    --pm-cream: #e8dfc8;
+    --pm-forest: #4a6358;
+    --pm-sage: #8fa89a;
+  }
+
+  .dark {
+    --background: 38 40% 88%;
+    --foreground: 160 16% 18%;
+    --card: 160 16% 18%;
+    --card-foreground: 38 40% 88%;
+    --popover: 160 16% 18%;
+    --popover-foreground: 38 40% 88%;
+    --primary: 40 62% 45%;
+    --primary-foreground: 160 16% 12%;
+    --secondary: 155 14% 30%;
+    --secondary-foreground: 38 40% 88%;
+    --muted: 155 14% 25%;
+    --muted-foreground: 38 20% 65%;
+    --accent: 40 62% 45%;
+    --accent-foreground: 160 16% 12%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 38 40% 88% / 0.12;
+    --input: 38 40% 88% / 0.3;
+    --ring: 40 62% 45%;
+    --chart-1: 35 82% 76%;
+    --chart-2: 100 15% 42%;
+    --chart-3: 30 60% 50%;
+    --chart-4: 35 70% 60%;
+    --chart-5: 320 10% 30%;
+    --sidebar-background: 0 0% 3.1%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 35 82% 76%;
+    --sidebar-primary-foreground: 0 0% 3.1%;
+    --sidebar-accent: 320 10% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 100% / 0.12;
+    --sidebar-ring: 35 82% 76%;
+  }
+}
+
+@layer base {
+  * {
+    @apply outline-ring/50;
+    border-color: hsl(var(--border));
+  }
+
+  * {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: #0A0A0A !important;
+    color: #F2EDE6;
+  }
+}
+
+@layer utilities {
+  .gold-text {
+    color: #b8922a;
+  }
+  .gold-alt-text {
+    color: #c9a44a;
+  }
+  .ivy-text {
+    color: #8fa89a;
+  }
+  .pm-label {
+    font-family: 'Jost', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 11px;
+    color: #B8934A;
+  }
+  .pm-heading {
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #F2EDE6;
+  }
+  .pm-body {
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.85;
+    color: #D4CFC8;
+  }
+  .pm-btn {
+    background: transparent;
+    border: 1px solid #F2EDE6;
+    color: #F2EDE6;
+    font-family: 'Jost', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 13px;
+    padding: 14px 32px;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+  }
+  .pm-btn:hover {
+    background-color: rgba(45,63,56,0.08);
+  }
+  .pm-btn:focus-visible {
+    outline: 2px solid #b8922a;
+    outline-offset: 2px;
+  }
+}
+
+@keyframes rotate-badge {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.hidden-seo {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}

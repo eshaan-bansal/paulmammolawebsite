@@ -60,7 +60,7 @@ export default function Team() {
             </h2>
             <div className="mt-3 mb-4" style={{ width: "40px", height: "2px", backgroundColor: "#B8934A" }} />
             <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "16px", fontWeight: 300, color: "#D4CFC8", lineHeight: 1.8, maxWidth: "520px" }}>
-              With over 54 years behind the chair, Paul Mammola is the heart and soul of the salon that bears his name. He founded the salon in 1970 and built it into a Lexington institution. Today, Paul continues to do what he loves most — cutting hair and connecting with the community he has served for over five decades.
+              With over 50+ years behind the chair, Paul Mammola founded the salon in 1970 and built it into a Lexington keepsake. Today, Paul continues to do what he loves most — cutting hair and connecting with the community he has served for over five decades.
             </p>
           </div>
         </div>

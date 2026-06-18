@@ -1,6 +1,6 @@
 import React from "react";
 
-const BANNER_IMG = "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1400&q=80";
+const BANNER_IMG = "/about-salon-bw.png";
 
 export default function About() {
   return (
@@ -21,7 +21,7 @@ export default function About() {
         <img
           src={BANNER_IMG}
           alt="paul-mammola-salon-stylist-lexington-ma"
-          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block", filter: "none" }}
+          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 55%", display: "block", filter: "none" }}
         />
       </div>
 

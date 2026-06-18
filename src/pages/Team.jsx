@@ -3,12 +3,12 @@ import React from "react";
 const BOOKING_URL = "https://paulmammolasalonandspa.salontarget.com";
 
 const STYLISTS = [
-{ name: "Marketa ", role: "MASTER ESTHETICIAN\n\n", bio: "Marketa brings 25+ years of experience. She is a master in facials, waxing, manicures, and pedicures.", img: "https://media.base44.com/images/public/6a2b4b5f81a4eff0fcc04901/396c8a92c_image1.jpg", imgStyle: { width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" } },
-{ name: "Dahab", role: "MASTER STYLIST", bio: "She has 20+ years of experience and brings creativity and precision to every client’s experience. With extensive training and advanced cutting, extensions, and color correction.", img: "https://media.base44.com/images/public/6a2b4b5f81a4eff0fcc04901/0a137060d_image2.jpg", imgStyle: { width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" } },
-{ name: "Kesa", role: "MASTER STYLIST", bio: "She has 17+ years of experience. Her approach combines technical expertise with personalized consultation, ensuring each guest leaves feeling confident and refreshed. She specializes in all haircuts and color.", img: "https://media.base44.com/images/public/6a2b4b5f81a4eff0fcc04901/469493927_image20.jpg", imgStyle: { width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" } },
-{ name: "Ela", role: "STYLIST", bio: "Ela is an advanced stylist with a passion to help clients achieve looks that enhance their natural beauty and fit their lifestyle. She also does updos for events.", img: "https://media.base44.com/images/public/6a2b4b5f81a4eff0fcc04901/defe02dd9_image18.jpg", imgStyle: { width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" } },
-{ name: "Aneesa", role: "ASSISTANT STYLIST", bio: "Passionate about helping clients look and feel their best while enhancing her skills behind the chair.", img: "https://media.base44.com/images/public/6a2b4b5f81a4eff0fcc04901/c5739a594_istockphoto-1162622561-612x612.jpg", imgStyle: { width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" } },
-{ name: "Le", role: "MASTER NAIL TECH", bio: "She has 20+ years of experience and is dedicated to providing exceptional nail care. She is extremely detail oriented with outstanding feedback. Le's goal is to create healthy nails for every client.", img: "https://media.base44.com/images/public/6a2b4b5f81a4eff0fcc04901/5757621c4_two-women-are-pampering-their-nails-during-a-manicure-session-a-stylist-carefully-applies-blue-polish-while-candles-create-a-serene-ambiance-enhancing-the-salon-experience-photo.jpg", imgStyle: { width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" } }];
+{ name: "Marketa", role: "MASTER ESTHETICIAN", bio: "With over 25 years of experience, Marketa is a true master of her craft, specializing in facials, waxing, manicures, and pedicures.", img: "https://media.base44.com/images/public/6a2b4b5f81a4eff0fcc04901/396c8a92c_image1.jpg", imgStyle: { width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" } },
+{ name: "Dahab", role: "MASTER STYLIST", bio: "With over 20 years of experience, Dahab brings creativity and precision to every appointment. Her extensive training spans advanced cutting, extensions, and color correction, ensuring every client leaves looking and feeling their best.", img: "https://media.base44.com/images/public/6a2b4b5f81a4eff0fcc04901/0a137060d_image2.jpg", imgStyle: { width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" } },
+{ name: "Kesa", role: "MASTER STYLIST", bio: "With over 17 years of experience, Kesa combines technical expertise with personalized consultation. Specializing in haircuts and color, she ensures every guest leaves feeling confident and refreshed.", img: "https://media.base44.com/images/public/6a2b4b5f81a4eff0fcc04901/469493927_image20.jpg", imgStyle: { width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" } },
+{ name: "Ela", role: "STYLIST", bio: "Ela is a skilled stylist with a passion for helping clients achieve looks that enhance their natural beauty and suit their lifestyle. She also specializes in updos for special events.", img: "https://media.base44.com/images/public/6a2b4b5f81a4eff0fcc04901/defe02dd9_image18.jpg", imgStyle: { width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" } },
+{ name: "Aneesa", role: "ASSISTANT STYLIST", bio: "Aneesa is passionate about helping clients look and feel their best, bringing dedication and enthusiasm to every guest experience as she continues to grow her craft.", img: "https://media.base44.com/images/public/6a2b4b5f81a4eff0fcc04901/c5739a594_istockphoto-1162622561-612x612.jpg", imgStyle: { width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" } },
+{ name: "Le", role: "MASTER NAIL TECH", bio: "With over 20 years of experience, Le is dedicated to delivering exceptional nail care with a meticulous, detail-oriented approach. Her goal is simple: healthy, beautiful nails for every client.", img: "https://media.base44.com/images/public/6a2b4b5f81a4eff0fcc04901/5757621c4_two-women-are-pampering-their-nails-during-a-manicure-session-a-stylist-carefully-applies-blue-polish-while-candles-create-a-serene-ambiance-enhancing-the-salon-experience-photo.jpg", imgStyle: { width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" } }];
 
 
 const btnStyle = { fontFamily: "'Jost', sans-serif", textTransform: "uppercase", letterSpacing: "0.15em", fontSize: "12px", border: "1px solid #F2EDE6", color: "#F2EDE6", textDecoration: "none", textAlign: "center", display: "inline-block", padding: "16px 0" };
@@ -45,6 +45,22 @@ export default function Team() {
             </p>
             <p className="mt-4 italic" style={{ fontFamily: "'Jost', sans-serif", color: "#B8934A", fontSize: "14px" }}>
               &ldquo;This space was made for you.&rdquo;
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 2B — FOUNDER FEATURE */}
+      <section className="m-0 p-0" style={{ backgroundColor: "#0A0A0A" }}>
+        <div className="max-w-4xl mx-auto px-6 py-10 flex flex-col items-center text-center md:items-start md:text-left">
+          <div className="flex flex-col justify-center" style={{ maxWidth: "600px", margin: "0 auto" }}>
+            <p style={{ fontFamily: "'Jost', sans-serif", textTransform: "uppercase", letterSpacing: "0.2em", fontSize: "11px", color: "#B8934A" }}>FOUNDER</p>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "36px", color: "#B8934A", textTransform: "uppercase", letterSpacing: "0.1em", fontWeight: 400, marginTop: "8px" }}>
+              Paul Mammola
+            </h2>
+            <div className="mt-3 mb-4" style={{ width: "40px", height: "2px", backgroundColor: "#B8934A" }} />
+            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "16px", fontWeight: 300, color: "#D4CFC8", lineHeight: 1.8, maxWidth: "520px" }}>
+              With over 54 years behind the chair, Paul Mammola is the heart and soul of the salon that bears his name. He founded the salon in 1970 and built it into a Lexington institution. Today, Paul continues to do what he loves most — cutting hair and connecting with the community he has served for over five decades.
             </p>
           </div>
         </div>

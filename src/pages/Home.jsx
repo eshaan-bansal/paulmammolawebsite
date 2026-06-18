@@ -34,7 +34,7 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 right-0 pointer-events-none" style={{ height: "220px", background: "linear-gradient(to top, #0A0A0A, transparent)", zIndex: 2 }} />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center z-10 px-6">
-          <PMBadge size={220} />
+          <PMBadge size={264} />
           <p className="mt-8 text-center" style={{ fontFamily: "'Jost', sans-serif", fontSize: "12px", color: "#B8934A", textTransform: "uppercase", letterSpacing: "0.25em" }}>
             THE SALON THAT FEELS LIKE HOME
           </p>

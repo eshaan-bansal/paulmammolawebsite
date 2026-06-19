@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { label: "SERVICES", path: "/services" },
   { label: "MEET THE TEAM", path: "/team" },
   { label: "EMPLOYMENT", path: "/employment" },
+  { label: "CONTACT", path: "/contact" },
   { label: "E-GIFT CARDS", path: "https://paulmammolasalonandspa.salontarget.com/egift/?guestonly=guestonly", external: true },
 ];
 

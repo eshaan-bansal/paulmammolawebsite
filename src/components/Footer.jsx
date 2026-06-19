@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="text-center md:text-left">
             <span style={labelStyle}>LET&apos;S GET TOGETHER</span>
             <div style={bodyStyle}>
-              <p>(781) 861-9055 &nbsp;|&nbsp; (781) 862-4833</p>
+              <p><a href="tel:+17818619055" className="hover:opacity-70 transition-opacity" style={{ color: "#F2EDE6" }}>(781) 861-9055</a> &nbsp;|&nbsp; <a href="tel:+17818624833" className="hover:opacity-70 transition-opacity" style={{ color: "#F2EDE6" }}>(781) 862-4833</a></p>
               <p><a href="mailto:pmsandsb@gmail.com" className="hover:opacity-70 transition-opacity" style={{ color: "#F2EDE6" }}>pmsandsb@gmail.com</a></p>
               <p>1787 Massachusetts Avenue</p>
               <p>Lexington, MA 02420</p>

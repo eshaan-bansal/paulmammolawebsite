@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { base44 } from "@/api/base44Client";
+import emailjs from "@emailjs/browser";
+
+// EmailJS keys are public client-side values (they ship in the browser bundle),
+// so inline defaults are used as a fallback when env vars aren't configured.
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_bj55np4";
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_20xdkkq";
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "11rPjOomH3m8tcvjV";
 
 const POSITIONS = ["Hair Stylist", "Nail Technician", "Esthetician", "Front Desk", "Other"];
 
@@ -28,6 +34,7 @@ export default function Employment() {
   const hidden = <h1 className="hidden-seo">Salon Jobs in Lexington MA — Paul Mammola Salon and Spa</h1>;
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
   const [form, setForm] = useState({ fullName: "", email: "", phone: "", position: "", experience: "", hasClientList: null, about: "" });
 
   const handleChange = (field, value) => setForm((prev) => ({ ...prev, [field]: value }));
@@ -35,15 +42,26 @@ export default function Employment() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
+    setError("");
     try {
-      await base44.integrations.Core.SendEmail({
-        to: "phamphamsalon@hotmail.com",
-        subject: `Employment Application — ${form.fullName}`,
-        body: `Name: ${form.fullName}\nEmail: ${form.email}\nPhone: ${form.phone}\nPosition: ${form.position}\nYears of Experience: ${form.experience}\nExisting Client List: ${form.hasClientList === true ? "Yes" : form.hasClientList === false ? "No" : "Not specified"}\n\nAbout:\n${form.about}`.trim()
-      });
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.fullName,
+          from_email: form.email,
+          phone: form.phone,
+          position: form.position,
+          experience: form.experience,
+          client_list: form.hasClientList === true ? "Yes" : form.hasClientList === false ? "No" : "Not specified",
+          message: form.about,
+        },
+        { publicKey: EMAILJS_PUBLIC_KEY }
+      );
       setSubmitted(true);
-    } catch {
-      setSubmitted(true);
+    } catch (err) {
+      console.error("EmailJS send failed:", err);
+      setError("Something went wrong sending your application. Please try again, or email us directly at pmsandsb@gmail.com.");
     } finally {
       setSending(false);
     }
@@ -147,6 +165,12 @@ export default function Employment() {
                     onBlur={(e) => e.target.style.borderColor = "rgba(255,255,255,0.15)"}
                   />
                 </div>
+
+                {error && (
+                  <p style={{ fontFamily: "'Jost', sans-serif", fontWeight: 300, fontSize: "14px", color: "#E07A5F", lineHeight: 1.6 }}>
+                    {error}
+                  </p>
+                )}
 
                 <button
                   type="submit"

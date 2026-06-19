@@ -40,15 +40,17 @@ export default function About() {
               "This is my calling. Paul Mammola Salon has been part of Lexington since 1970, and I am honored to carry that legacy forward. I have built a team of people who share that same belief — that great service starts with genuinely caring about the person in front of you.",
               "So welcome. Come sit in our chair. Stay a while.",
             ].map((text, i, arr) => (
-              <p key={i} style={{ fontFamily: "'Jost', sans-serif", fontSize: "16px", fontWeight: 300, color: "#D4CFC8", lineHeight: 1.9, marginBottom: i < arr.length - 1 ? "24px" : 0 }}>
+              // Rendered as <div> (not <p>) to keep Safari Reader View from
+              // auto-detecting this prose as an article and hijacking the page.
+              <div key={i} style={{ fontFamily: "'Jost', sans-serif", fontSize: "16px", fontWeight: 300, color: "#D4CFC8", lineHeight: 1.9, marginBottom: i < arr.length - 1 ? "24px" : 0 }}>
                 {text}
-              </p>
+              </div>
             ))}
           </div>
 
-          <p style={{ fontFamily: "'Jost', sans-serif", fontStyle: "italic", fontSize: "16px", color: "#B8934A", marginTop: "32px" }}>
+          <div style={{ fontFamily: "'Jost', sans-serif", fontStyle: "italic", fontSize: "16px", color: "#B8934A", marginTop: "32px" }}>
             — Chau T. Pham, Owner
-          </p>
+          </div>
         </div>
       </section>
     </div>

@@ -40,9 +40,9 @@ export default function Team() {
               Chau T. Pham
             </h2>
             <div className="mt-3 mb-4" style={{ width: "40px", height: "2px", backgroundColor: "#B8934A" }} />
-            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "16px", fontWeight: 300, color: "#D4CFC8", lineHeight: 1.8, maxWidth: "520px" }}>
+            <div style={{ fontFamily: "'Jost', sans-serif", fontSize: "16px", fontWeight: 300, color: "#D4CFC8", lineHeight: 1.8, maxWidth: "520px" }}>
               Chau is the proud owner of Paul Mammola Salon and Spa. She is happily married to Tommy Pham and is a proud mother of three. Growing up, her mother always emphasized that looking your best is a form of confidence — a belief Chau has carried into everything she does in this industry. Her greatest joy is making people feel like the very best version of themselves.
-            </p>
+            </div>
             <p className="mt-4 italic" style={{ fontFamily: "'Jost', sans-serif", color: "#B8934A", fontSize: "14px" }}>
               &ldquo;This space was made for you.&rdquo;
             </p>
@@ -59,9 +59,9 @@ export default function Team() {
               Paul Mammola
             </h2>
             <div className="mt-3 mb-4" style={{ width: "40px", height: "2px", backgroundColor: "#B8934A" }} />
-            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "16px", fontWeight: 300, color: "#D4CFC8", lineHeight: 1.8, maxWidth: "520px" }}>
+            <div style={{ fontFamily: "'Jost', sans-serif", fontSize: "16px", fontWeight: 300, color: "#D4CFC8", lineHeight: 1.8, maxWidth: "520px" }}>
               With over 50+ years behind the chair, Paul Mammola founded the salon in 1970 and built it into a Lexington keepsake. Today, Paul continues to do what he loves most — cutting hair and connecting with the community he has served for over five decades.
-            </p>
+            </div>
           </div>
         </div>
       </section>
@@ -90,9 +90,9 @@ export default function Team() {
                   {stylist.name}
                 </h3>
                 <p style={{ fontFamily: "'Jost', sans-serif", textTransform: "uppercase", letterSpacing: "0.2em", fontSize: "11px", color: "#B8934A", marginTop: "4px" }}>{stylist.role}</p>
-                <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "15px", fontWeight: 300, color: "#D4CFC8", lineHeight: 1.8, maxWidth: "280px", marginTop: "12px" }}>
+                <div style={{ fontFamily: "'Jost', sans-serif", fontSize: "15px", fontWeight: 300, color: "#D4CFC8", lineHeight: 1.8, maxWidth: "280px", marginTop: "12px" }}>
                   {stylist.bio}
-                </p>
+                </div>
               </div>
             )}
           </div>

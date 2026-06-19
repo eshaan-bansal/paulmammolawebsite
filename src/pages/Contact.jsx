@@ -39,9 +39,6 @@ export default function Contact() {
             <a href="tel:+17818619055" style={{ ...valueStyle, fontSize: "22px", letterSpacing: "0.04em" }} className="hover:opacity-70 transition-opacity">
               (781) 861-9055
             </a>
-            <a href="tel:+17818624833" style={{ ...valueStyle, marginTop: "6px" }} className="hover:opacity-70 transition-opacity">
-              (781) 862-4833
-            </a>
           </ContactBlock>
 
           <ContactBlock label="Email Us">
